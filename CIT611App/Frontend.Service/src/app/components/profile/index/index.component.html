@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>CIT 611 Application  Profiles</h1>
+<a [routerLink]="['/profile/create']" routerLinkActive="router-link-active"  >create new profile</a>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of profiles;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>
+          <button (click)="delete(i)">DELETE</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
